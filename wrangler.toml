@@ -1,21 +1,24 @@
 name = "core-api"
 compatibility_date = "2024-08-15"
+vars = { ENVIRONMENT = "dev" }
 
-# [vars]
-# MY_VAR = "my-variable"
+[env.production]
+vars = { ENVIRONMENT = "production" }
 
-# [[kv_namespaces]]
-# binding = "MY_KV_NAMESPACE"
-# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+[[kv_namespaces]]
+binding = "SESSION_STORE"
+id = "f68982c2a2e247e68ee4621658129a7e"
+preview_id = "f68982c2a2e247e68ee4621658129a7e"
 
 # [[r2_buckets]]
 # binding = "MY_BUCKET"
 # bucket_name = "my-bucket"
 
-# [[d1_databases]]
-# binding = "DB"
-# database_name = "my-database"
-# database_id = ""
+[[d1_databases]]
+binding = "DB"
+database_name = "db"
+database_id = "397bff7e-f115-4789-98bb-01d665350b43"
+migrations_dir = "db/migrations"
 
 # [ai]
 # binding = "AI"
